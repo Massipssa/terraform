@@ -1,2 +1,4 @@
 aws/terraform.tfvars
 aws/.terraform/*
+*/.terraform/*
+*/terraform.tfvars
