@@ -37,7 +37,7 @@
  
 - ```terraform fmt``` can be used, to will format Terraform files. It uses two flags 
   -  ```check``` it doesn't alter the files
-  -  ```recursice``` it checks anf reformat files
+  -  ```recursive``` it checks anf reformat files
  
 ## Supply variables
 
