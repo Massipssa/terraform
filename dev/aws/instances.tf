@@ -9,7 +9,6 @@ data "aws_ssm_parameter" "ami" {
 ##################################################################################
 # RESOURCES
 ##################################################################################
-
 # INSTANCES #
 resource "aws_instance" "nginx" {
   count                  = var.instance_count

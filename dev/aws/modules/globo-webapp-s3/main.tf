@@ -1,10 +1,9 @@
-# S3 Bucket config#
+# S3 Bucket config
 resource "aws_s3_bucket" "web_bucket" {
   bucket        = var.bucket_name
   force_destroy = true
 
   tags = var.common_tags
-
 }
 
 resource "aws_s3_bucket_policy" "web_bucket" {

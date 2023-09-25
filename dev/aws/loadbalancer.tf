@@ -1,10 +1,9 @@
 # aws_elb_service_account
-
 data "aws_elb_service_account" "root" {}
 
-# aws_lb
+# ALB
 resource "aws_lb" "nginx" {
-  name               = "globo-web-alb"
+  name               = "${var.company}-web-ALB"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb_sg.id]
@@ -13,8 +12,10 @@ resource "aws_lb" "nginx" {
 
   enable_deletion_protection = false
 
+  # bucket to save ALB logs
   access_logs {
     bucket  = module.web_app_s3.web_bucket.id
+    # todo: set appropriate name
     prefix  = "alb-logs"
     enabled = true
   }
@@ -22,9 +23,9 @@ resource "aws_lb" "nginx" {
   tags = local.common_tags
 }
 
-# aws_lb_target_group
+# Target Group
 resource "aws_lb_target_group" "nginx" {
-  name     = "nginx-alb-tg"
+  name     = "nginx-alb-TG"
   port     = 80
   protocol = "HTTP"
   vpc_id   = module.app.vpc_id

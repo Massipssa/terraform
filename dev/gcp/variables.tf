@@ -51,6 +51,7 @@ variable "vm_types" {
 }
 
 ## IAM 
+/*
 variable "var_name" {
   type = string
   description = "This is description of the variable"
@@ -61,3 +62,4 @@ variable "var_name" {
     error_message = "This is not valid AMI id"
   }
 }
+*/
