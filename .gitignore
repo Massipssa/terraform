@@ -1,4 +1,3 @@
-/dev/aws/vpn/.terraform
-/dev/aws/alb/.terraform/
-/dev/aws/eks/.terraform/
-/dev/gcp/.terraform/
+/dev/aws/*/.terraform
+/dev/*/.terraform/
+dev/aws/*/.terraform.*
