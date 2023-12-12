@@ -9,3 +9,16 @@ variable "github_path" {
   default = "github"
   description = "Path to store github credentials"
 }
+
+
+// PKI
+
+variable "csr_request_type" {
+  type = map(string)
+  description = "CSR type"
+  default = {
+    internal  = "internal"
+    exported  = "exported"
+    kms  = "kms"
+  }
+}
