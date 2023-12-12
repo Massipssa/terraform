@@ -3,5 +3,7 @@
 dev/aws/*/.terraform.*
 dev/hashicorp/*/.terraform.*
 
+idea
 .terraform/
 .terraform.*
+
