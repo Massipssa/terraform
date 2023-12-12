@@ -2,3 +2,6 @@
 /dev/*/.terraform/
 dev/aws/*/.terraform.*
 dev/hashicorp/*/.terraform.*
+
+.terraform/
+.terraform.*
